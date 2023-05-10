@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -15,10 +15,40 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">Click Me</a>
+      <div class="weather-app">
+        <h1>New York</h1>
+        <ul>
+          <li>Friday 05:00</li>
+          <li>Clear</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Clear"
+            />
+            12 <sup>0</sup>C | <sup>0</sup>F
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: 0%</li>
+              <li>Humidity: 73%</li>
+              <li>Wind: 3km/hr</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/atinsbukol/Vanilla-Weather-App"
+          target="_blank"
+        >
+          Open-source code
+        </a>
+        by Bukola Agunbiade
+      </small>
     </div>
 
-    <script src="src/app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

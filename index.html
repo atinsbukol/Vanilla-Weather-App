@@ -15,26 +15,35 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>New York</h1>
-        <ul>
-          <li>Friday 05:00</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Clear"
-            />
-            12 <sup>0</sup>C | <sup>0</sup>F
-          </div>
-          <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>New York</h1>
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 73%</li>
-              <li>Wind: 3km/hr</li>
+              <li>Friday 05:00</li>
+              <li>Clear</li>
             </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Clear"
+                  />
+                  <span class="temp">
+                    <strong>12</strong
+                    ><span class="units">°C | <a href="#">°F</a></span></span
+                  >
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Precipitation: 0%</li>
+                  <li>Humidity: 73%</li>
+                  <li>Wind: 3km/hr</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <small>

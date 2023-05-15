@@ -80,7 +80,7 @@ function displayCelsiusTemperature(event) {
 
 let celciusTemperature = null
 
-search("London")
+search("Abeokuta")
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesubmit)

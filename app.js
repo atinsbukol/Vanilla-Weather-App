@@ -21,11 +21,12 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
 
     let temperatureElement = document.querySelector("#temperature");
-    let cityElement = document.querySelector("#city")
-    let descriptionElement = document.querySelector("#description")
-    let humidityElement = document.querySelector("#humidity")
-    let windElement = document.querySelector("#wind")
-    let dateElement = document.querySelector("#date")
+    let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind");
+    let dateElement = document.querySelector("#date");
+    let iconElement = document.querySelector("#icon");
     
     temperatureElement.innerHTML = Math.round(response.data.main.temp)
 
@@ -33,13 +34,17 @@ function displayTemperature(response) {
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
-    dateElement.innerHTML = formatDate(response.data.dt *1000)
+    dateElement.innerHTML = formatDate(response.data.dt *1000);
+    iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+
 
 
 let apiKey = "6ce66d083b4d6dddb74ba02266495c46"
 
-city = "New York"
+city = "Lisbon"
 
 let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 

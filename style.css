@@ -28,7 +28,7 @@ li{
 }
 
 
-li:first-letter {
+li .first-letter {
 text-transform: capitalize;
 }
 
@@ -58,8 +58,17 @@ text-transform: capitalize;
     color: rgb(33, 33, 33);
     line-height: 64px;
 
-
 }
+
+.weather-temperature .active{
+    color:rgb(33, 33, 33) ;
+    cursor: default;
+}
+
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
+
 .temp{
     font-size: 35px;
 }

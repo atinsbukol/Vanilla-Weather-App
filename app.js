@@ -27,8 +27,10 @@ function displayTemperature(response) {
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
+
+    celciusTemperature =response.data.main.temp
     
-    temperatureElement.innerHTML = Math.round(response.data.main.temp)
+    temperatureElement.innerHTML = Math.round(celciusTemperature)
 
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
@@ -53,10 +55,39 @@ function handlesubmit(event) {
     console.log(cityInputElement.value)
 }
 
+function displayFahrenheitTemperature(event) {
+    event.preventDefault()
+    let temperatureElement = document.querySelector("#temperature")
+    // add the actice class from celcius link
+    celciusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    
 
-search("Lagos")
+    let FahrenheitTemperature = (celciusTemperature * 9/5) + 32
+    
+    temperatureElement.innerHTML = Math.round(FahrenheitTemperature)
 
+}
 
+function displayCelsiusTemperature(event) {
+    event.preventDefault()
+    let temperatureElement = document.querySelector("#temperature")
+    temperatureElement.innerHTML = Math.round(celciusTemperature)
+    celciusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+
+}
+
+let celciusTemperature = null
+
+search("London")
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesubmit)
+
+
+let  fahrenheitLink = document.querySelector("#fahrenheit-link")
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
+
+let  celciusLink = document.querySelector("#celsius-link")
+celciusLink.addEventListener("click", displayCelsiusTemperature)
